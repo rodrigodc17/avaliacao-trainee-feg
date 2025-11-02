@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://127.0.0.1:5000/ -->
+<html lang="en"><plasmo-csui><template shadowrootmode="open"><div id="plasmo-shadow-container" style="z-index: 2147483647; position: relative;"><div id="plasmo-overlay-0" class="plasmo-csui-container" style="display: flex; position: absolute; top: 0px; left: 0px;"></div></div></template></plasmo-csui><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moonara Balance+</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./index_files/css2" rel="stylesheet">
+  <link rel="stylesheet" href="./index_files/style.css">
+<style>
+    .control-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width: 250px;
+      flex-direction: row;
+      background: rgba(0,0,0,0.5);
+      border-radius: 5px;
+      padding-right: 10px;
+    }
+    .upsell-toggle {
+      cursor: pointer;
+    }
+    .upsell-label {
+      font-size: 0.88rem;
+      color: #fff;
+      cursor: pointer;
+    }
+    .custom-button {
+      background: linear-gradient(180deg, #7865EC 4.97%, #1A2EDB 94.99%);
+      color: white;
+      font-weight: 600;
+      border: none;
+      min-width: 100px;
+      height: 40px;
+      cursor: pointer;
+      text-align: center;
+      display: inline-block;
+      font-size: 0.88rem;
+      transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      border-radius: 5px;
+      left: 4%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .custom-button.clicked {
+      background: linear-gradient(180deg, #219494 4.97%, #0D724D 94.99%);
+      color: white;
+      font-weight: 600;
+    }
+    .loading-spinner {
+      border: 2px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 2px solid #192BD3;
+      width: 20px;
+      height: 20px;
+      color: white;
+      -webkit-animation: spin 2s linear infinite; /* Safari */
+      animation: spin 2s linear infinite;
+    }
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg);}
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg);}
+    }
+    </style></head>
+<body>
+  <header class="nav">
+    <div class="nav__inner container">
+      <div class="brand">
+        <img src="./index_files/logo.png" alt="Moonara Balance+">
+      </div>
+      <nav>
+        <a href="http://127.0.0.1:5000/#about">About</a>
+        <a href="http://127.0.0.1:5000/#benefits">Benefits</a>
+        <a href="http://127.0.0.1:5000/#moonsync">MoonSync Effect™</a>
+        <a href="http://127.0.0.1:5000/#testimonials">Testimonials</a>
+        <a href="http://127.0.0.1:5000/#faq">FAQ</a>
+      </nav>
+      <a href="http://127.0.0.1:5000/#buy" class="btn btn--primary">Buy</a>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="container hero__content fade-in">
+      <h1>Hormonal balance, gentle science.</h1>
+      <p class="lead-strong"><strong>Moonara Balance+ is designed to restore clarity, vitality, and serenity during hormonal transition — without stigma and without magical promises.</strong></p>
+      <div class="hero__ctas">
+        <a href="http://127.0.0.1:5000/#buy" class="btn btn--primary btn--lg">Try now</a>
+        <a href="http://127.0.0.1:5000/#moonsync" class="btn btn--ghost btn--lg">Learn about MoonSync Effect™</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container grid grid--2 fade-up" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+      <div>
+        <h2>Made for your phase, inspired by the moon</h2>
+        <p>Our clean design and pastel tones reflect our purpose: elegant, functional care. Each crescent-shaped gummy symbolizes the balance between <strong>nature</strong> and <strong>science</strong>.</p>
+        <p>Tone of voice: empathetic, light, and scientifically grounded — aligned with our brand guidelines.</p>
+      </div>
+      <div class="card card--glass">
+        <img src="./index_files/mood.png" alt="Moodboard" class="rounded shadow">
+      </div>
+    </div>
+  </section>
+
+  <section id="benefits" class="section section--tint">
+    <div class="container">
+      <h2 class="center">Benefits you can feel</h2>
+      <div class="grid grid--3 mt-32">
+        <div class="benefit reveal" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 1 0 9.79 9.79z"></path></svg>
+          </div>
+          <h3>Clarity &amp; stable mood</h3>
+          <p>Supports focus and helps reduce emotional swings.</p>
+        </div>
+        <div class="benefit reveal" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M3 6h7L3 14h7L3 22h18V20H12l8-8H12l8-8H3z"></path></svg>
+          </div>
+          <h3>Restorative sleep</h3>
+          <p>Calmer nights and deeper rest.</p>
+        </div>
+        <div class="benefit reveal" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 22a7 7 0 0 1-7-7c0-3.31 2.69-6 6-6h2a6 6 0 1 1-1 13zM9 7a3 3 0 1 1 6 0 3 3 0 0 1-6 0z"></path></svg>
+          </div>
+          <h3>Natural balance</h3>
+          <p>Gentle support for hot flashes, irritability, and stress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="moonsync" class="section">
+    <div class="container">
+      <div class="grid grid--2">
+        <div class="fade-up" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+          <h2>MoonSync Effect™</h2>
+          <p>Our exclusive system is inspired by the moon’s natural rhythm to align body and mind to the female energy cycle. <strong>Half science, half nature.</strong></p>
+          <div class="pillars">
+            <div class="pillar">
+              <h4>1 — Rhythm &amp; Alignment</h4>
+              <p>Daily routine that follows your cycle to promote consistency.</p>
+            </div>
+            <div class="pillar">
+              <h4>2 — Curated Botanicals</h4>
+              <p>Standardized extracts and supportive vitamins.</p>
+            </div>
+            <div class="pillar">
+              <h4>3 — Sensory &amp; Adherence</h4>
+              <p>Crescent gummies, light flavor, a texture that invites habit.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card card--gradient raise"><img src="./index_files/product.png" alt="Moonara user with jar" class="rounded">
+          <ul class="bullets">
+            <li>✓ Gluten-free • Lactose-free • No artificial colors</li>
+            <li>✓ Produced in a controlled and audited environment</li>
+            <li>✓ Full-label transparency</li>
+        </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALITY & TRANSPARENCY -->
+
+  <section id="testimonials" class="section section--tint">
+    <div class="container center">
+      <h2>Loved by women like you</h2>
+      <div class="grid grid--3 mt-32">
+        <div class="quote reveal" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+          <p>“I finally sleep well and feel like myself again.”</p>
+          <span>— Carla, 49</span>
+        </div>
+        <div class="quote reveal" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+          <p>“Light, tasty, and it improved my mood.”</p>
+          <span>— Helena, 46</span>
+        </div>
+        <div class="quote reveal" style="transition: transform 0.7s, opacity 0.7s; opacity: 1; transform: none;">
+          <p>“The first one I felt comfortable taking daily.”</p>
+          <span>— Marina, 52</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="buy" class="section cta">
+    <div class="container center fade-in">
+      <h2>Ready to feel the balance?</h2>
+      <p>Subscribe today and get Moonara Balance+ with fast delivery.</p>
+      <a class="btn btn--primary btn--xl" href="http://127.0.0.1:5000/#">Buy now</a>
+      
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <div class="container">
+      <h2 class="center">Frequently Asked Questions</h2>
+      <div class="accordion mt-24">
+        <details>
+          <summary>How should I take it?</summary>
+          <p>Take 2 gummies daily, preferably at the same time, for at least 60 days.</p>
+        </details>
+        <details>
+          <summary>Any contraindications?</summary>
+          <p>Pregnant or breastfeeding women and people taking medications should consult a healthcare professional.</p>
+        </details>
+        <details>
+          <summary>What’s the flavor like?</summary>
+          <p>Soft, refreshing notes carefully crafted for daily adherence.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <small>© 2025 Moonara Balance+. All rights reserved.</small>
+      <small><a href="http://127.0.0.1:5000/#">Privacy Policy</a></small>
+    </div>
+  </footer>
+
+  <script src="./index_files/app.js.download"></script>
+
+<div class="glasp-extension-toaster" style="display: block; width: 320px; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; top: 40px; right: 24px; z-index: 9999;"><template shadowrootmode="open"><div class="glasp-extension" style="font-family: inherit;"></div></template></div></body><div class="glasp-extension" style="display: block; width: unset; margin: unset; padding: unset; border: unset; border-radius: unset; outline: unset; background-color: unset; box-shadow: unset; position: fixed; bottom: 16px; right: 16px; z-index: 9999;"><div class="glasp-extension" style="font-family: inherit;"></div></div></html>
