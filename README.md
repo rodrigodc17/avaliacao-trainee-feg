@@ -1,6 +1,6 @@
-# 🌙 Moonara Balance+ — Desafio Trainee FEG
+# 🌙 Moonara Balance+ - Desafio Trainee FEG
 
-Entrega estruturada em 4 blocos complementares — da pesquisa de mercado à execução visual e presell navegável.
+Entrega estruturada em 4 blocos complementares, da pesquisa de mercado à execução visual e presell navegável.
 
 ## 🔗 Navegação rápida
 - [Bloco 1 — Análise de Mercado](#bloco-1-—-análise-de-mercado)
