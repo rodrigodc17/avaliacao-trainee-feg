@@ -1,0 +1,90 @@
+
+:root{
+  --lavender:#DCCBEA;
+  --mauve:#EAD8E6;
+  --blush:#EAC7D4;
+  --mint:#AEE5DF;
+  --teal:#1ECAD0;
+  --ink:#1F2430;
+  --slate:#2E3545;
+  --bg:#FFFBFE;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:var(--bg); color:var(--slate); line-height:1.6}
+img,svg{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+.container{width:min(1120px,92vw); margin:0 auto}
+
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px;
+     border-radius:999px; padding:10px 18px; font-weight:700; border:1px solid transparent;
+     transition: .25s ease}
+.btn--primary{background:var(--teal); color:#fff}
+.btn--ghost{border-color:rgba(31,36,48,.2)}
+.btn--lg{padding:14px 22px}
+.btn--xl{padding:16px 26px; font-size:1.05rem}
+.btn:hover{transform:translateY(-1px); filter:saturate(1.1)}
+
+.nav{position:sticky; top:0; z-index:40; backdrop-filter:saturate(120%) blur(10px);
+     background:linear-gradient(180deg, rgba(255,255,255,.75), rgba(255,255,255,.45));
+     border-bottom:1px solid rgba(0,0,0,.06)}
+.nav__inner{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
+.brand{display:flex; align-items:center; gap:10px}
+.brand__name{font-weight:800; letter-spacing:.3px}
+.moonlogo{height:30px; width:30px}
+
+.hero{position:relative; min-height:88vh; display:grid; place-items:center; overflow:hidden}
+.hero__bg{position:absolute; inset:0;
+  background:
+    radial-gradient(800px 500px at 20% 20%, rgba(220,203,234,.55), transparent 60%),
+    radial-gradient(900px 600px at 80% 80%, rgba(174,229,223,.45), transparent 60%),
+    linear-gradient(180deg, #100e1a 0%, #1a1826 100%);
+}
+.stars{position:absolute; inset:0; opacity:.4;}
+.crescent{position:absolute; right:10%; top:10%; width:min(26vw, 300px); opacity:.7; filter:drop-shadow(0 10px 30px rgba(0,0,0,.35))}
+
+.hero__content{position:relative; z-index:2; text-align:center; max-width:860px; padding:64px 0}
+.eyebrow{font-weight:700; text-transform:uppercase; font-size:.8rem; letter-spacing:.14em; opacity:.7}
+h1{font-size:clamp(2rem, 4.2vw, 3.2rem); line-height:1.1; margin:10px 0 10px}
+h1 .lunar{background:linear-gradient(90deg, var(--lavender), var(--mint)); -webkit-background-clip:text; background-clip:text; color:transparent}
+.lede{font-size:1.14rem; color:var(--ink); max-width:760px; margin:0 auto 16px; font-weight:600}
+.scroll-hint{margin-top:10px; font-size:.9rem; opacity:.75}
+
+.section--tint{background:linear-gradient(180deg, #fff, #FCF7FB)}
+.grid{display:grid; gap:28px}
+.grid--2{grid-template-columns:repeat(2, minmax(0, 1fr))}
+.grid--3{grid-template-columns:repeat(3, minmax(0, 1fr))}
+@media (max-width: 900px){ .grid--2, .grid--3{grid-template-columns:1fr} }
+
+.story{padding:84px 0}
+.card{background:#fff; border-radius:18px; padding:22px; box-shadow:0 8px 28px rgba(0,0,0,.06)}
+.card--glass{background:rgba(255,255,255,.7); backdrop-filter: blur(6px)}
+.card--gradient{background:linear-gradient(135deg, var(--lavender), var(--mint)); color:#1b2330}
+.raise{animation:raise 1s ease .2s both}
+@keyframes raise{from{transform:translateY(14px); opacity:.0} to{transform:none; opacity:1}}
+
+.ticklist{list-style:none; margin:10px 0 0; padding:0; display:grid; gap:8px; font-weight:600}
+.ticklist li::before{content:'✓'; color:var(--teal); margin-right:8px}
+.badge-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:14px}
+.badge{background:#E5FAF8; color:var(--teal); border-radius:999px; padding:6px 10px; font-weight:700; font-size:.85rem}
+
+.proof{padding:84px 0}
+.center{text-align:center}
+.mt-24{margin-top:24px}
+.mt-32{margin-top:32px}
+.quote{background:#fff; border-left:5px solid var(--teal); padding:18px; border-radius:12px; box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.quote footer{display:block; margin-top:6px; opacity:.7}
+
+.faq{padding:84px 0}
+details{background:#fff; border-radius:12px; padding:14px 16px; margin-bottom:12px; box-shadow:0 6px 16px rgba(0,0,0,.05)}
+summary{cursor:pointer; font-weight:700}
+details p{margin-top:10px}
+
+.footer{padding:34px 0; border-top:1px solid rgba(0,0,0,.06); background:#fff}
+.footer__inner{display:flex; align-items:center; justify-content:space-between}
+
+/* Animations on scroll */
+.fade-in{opacity:0; transform:translateY(10px); animation:fadeIn .9s ease .2s forwards}
+.fade-up{opacity:0; transform:translateY(18px)}
+.reveal{opacity:0; transform:translateY(26px)}
+@keyframes fadeIn{to{opacity:1; transform:none}}
